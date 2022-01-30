@@ -1,0 +1,53 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @media screen and (min-width: 320px){
+
+        .jl-page-wrapper{
+            width: 100%;
+            height: 100vh;
+            display: block;
+            background-color: #1C1C1C;
+            border: 30px solid #000;
+
+        }
+
+        .jl-tobar{
+            width: 100%;
+            height: 110px;
+            display: block;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+    }
+
+    @media screen and (min-width: 576px){
+        
+    }
+
+    @media screen and (min-width: 768px){
+        
+    }
+
+    @media screen and (min-width: 962px){
+        
+    }
+
+    @media screen and (min-width: 1200px){
+        
+    }
+
+    @media screen and (min-width: 1364px){
+        
+    }
+
+    @media screen and (min-width: 1600px){
+        
+    }
+
