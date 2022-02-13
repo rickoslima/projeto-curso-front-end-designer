@@ -10,15 +10,38 @@
         font-family: 'Open Sans', sans-serif;
     }
 
+    @keyframes fadeOut {
+        to{
+            opacity: 0;
+        }
+    }
+
     @media screen and (min-width: 320px){
 
-        .jl-page-wrapper{
+        .jl-page-wrapper, .jl-preloader{
             width: 100%;
             height: 100vh;
-            display: block;
+            display: table;
             background-color: #1C1C1C;
             border: 30px solid #000;
 
+        }
+        
+        .jl-preloader{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            position: fixed;
+            top:0;
+            left:0;
+
+        }
+
+        .jl-preloader-inner{
+            margin-top: -45px;
         }
 
         .jl-topbar{
@@ -44,13 +67,13 @@
             width: 46px;
             height: 31px;
             display: block;
-            margin: 55px auto 0 auto;
+            margin: 55px auto 0;
         }
 
         .jl-menu{
             display: none;
         }
-
+       
         .jl-btn-contact{
             width: 45px;
             height: 45px;
@@ -64,6 +87,8 @@
             border-radius: 50%;
             z-index: 200;
             transition: all 0.2s ease-out;
+            border: none;
+            cursor: pointer;
         }
 
 
@@ -125,13 +150,23 @@
             height: 25px;
             display: block;
             position: absolute;
-            bottom: -23px;
+            bottom: -23;
             right: 0;
             background: transparent url('../images/corner.svg') no-repeat;
-            
         }
 
-    }
+        /*-------Editando a Home-------*/
+
+        .jl-display-text{
+            margin-top: 10%;
+        }
+
+        #jl-home-presention{
+            background-image: url('../images/joao-lemon-designer-home.png');
+            background-repeat: no-repeat;
+            background-position: 50% bottom;
+        }
+}
 
     @media screen and (min-width: 576px){
         
@@ -155,8 +190,9 @@
             color: #bcbcbc;
             text-decoration: none;
             text-transform: lowercase;
+            text-decoration: none;
             display: inline-block;
-            margin: 50px 20px 0 20px;
+            margin: 50px 20px 0px 20px;
             font-weight: 400;
             position: relative;
 
@@ -207,6 +243,9 @@
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
 }
+.jl-title-big{
+    font-size: 120px;
+}
 
 .jl-text-green{
     color: #2ccb69;
@@ -216,7 +255,7 @@
     color: #4d4c4c;
 }
 
-.jl-text-ligth{
+.jl-text-light{
     color: #bcbcbc;
 }
 .jl-text-black{
@@ -230,11 +269,52 @@
     background-color: #4d4c4c;
 }
 
-.jl-bg-ligth{
+.jl-bg-light{
     background-color: #bcbcbc;
 }
 .jl-bg-black{
     background-color: #000;
+}
+
+.jl-mar-15{
+    margin: 15px;
+}
+.jl-mar-top-15{
+    margin-top: 15px;
+}
+.jl-mar-right-15{
+    margin-right: 15px;
+}
+.jl-mar-bottom-15{
+    margin-bottom: 15px;
+}
+.jl-mar-left-15{
+    margin-left: 15px;
+}
+
+.jl-pad-15{
+    padding: 15px;
+}
+.jl-pad-top-15{
+    padding-top: 15px;
+}
+.jl-pad-right-15{
+    padding-right: 15px;
+}
+.jl-pad-bottom-15{
+    padding-bottom: 15px;
+}
+.jl-pad-left-15{
+    padding-left: 15px;
+}
+
+.jl-full-height{
+    height: 100vh;
+   
+}
+
+.jl-first-section{
+ height: calc(100vh - 30px);
 }
 
 /* CLASSES COMPORTAMENTO */
@@ -245,4 +325,8 @@
 
 .jl-change-icon{
     background-position-y: -45px;
+}
+
+.jl-fade-out{
+    animation: fadeOut 2s forwards ease-out;
 }
