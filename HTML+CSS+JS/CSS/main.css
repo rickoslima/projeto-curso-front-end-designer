@@ -6,7 +6,7 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    p{
+    p, label{
         font-family: 'Open Sans', sans-serif;
     }
 
@@ -14,6 +14,14 @@
         to{
             opacity: 0;
         }
+    }
+
+    @keyframes slideTopIn {
+        to{
+            top:2%;
+            opacity: 1;
+        }
+        
     }
 
     @keyframes lineDown {
@@ -83,6 +91,73 @@
 
         .jl-preloader-inner{
             margin-top: -45px;
+        }
+
+        .jl-overlay{
+            width: 100%;
+            height: 100vh;
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background: rgba(44,203,105,0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .jl-modal{
+            width: 800px;
+            display: none;
+            padding: 30px;
+            border-radius: 0 30px 30px 30px;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 1200;
+            opacity: 0;
+        }
+
+        .jl--modal-header, .jl-modal-body, .jl-form {
+            width: 100%;
+            display: table;
+            position: relative;
+        }
+
+        .jl-close-modal{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            color: #2ccb69;
+            text-align: center;
+            line-height: center;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            background-color: #2f2f2f;
+        }
+
+        .jl-form label{
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .jl-field, .jl-textarea {
+            width: 100%;
+            background-color: #2f2f2f;
+            border-radius: 4px;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            text-indent: 15px;
+        }
+
+        .jl-field{
+            height: 45px;
         }
 
         .jl-topbar{
@@ -335,16 +410,57 @@
 
 .jl-btn{
     display: table;
-    padding: 0 35px;
-    background: #2ccb69;
-    height: 45px;
-    color: #000;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    line-height: 45px;
     font-weight: 600;
+    border: none;
+   transition: all 0.2s ease-out;
+   text-transform: lowercase;
+}
+
+.jl-btn-block{
+    display: block;
+    width: 100%;
+}
+
+.jl-btn-small{
+    height: 28px;
+    padding:  0 20px;
+    border-radius: 14px;
+    font-size: 11px;
+}
+
+.jl-btn-medium{
+    height: 38px;
+    padding:  0 27px;
+    border-radius: 19px;
+    font-size: 14px;
+}
+
+.jl-btn-large{
+    height: 45px;
+    padding: 0 35px;
     border-radius: 23px;
-   
+    font-size: 16px;
+}
+
+.jl-btn-green{
+    background-color: #2ccb69;
+    color: #000;
+}
+
+.jl-btn-green:hover{
+    background-color: rgb(6, 135, 55);
+    color: #fff;
+}
+
+.jl-btn-dark{
+    background-color: #151515;
+    color: #2ccb69;
+}
+.jl-btn-dark:hover{
+    background-color: #2f2f2f;
+    color: #fff;
 }
 
 /* CLASSES UTILITÁRIAS */
@@ -432,6 +548,10 @@
     display: block;
 }
 
+.jl-slide-top-in{
+    animation: slideTopIn 0.4s forwards cubic-bezier(0,1.11,.6,.89);
+}
+
 .jl-change-icon{
     background-position-y: -45px;
 }
@@ -439,3 +559,4 @@
 .jl-fade-out{
     animation: fadeOut 2s forwards ease-out;
 }
+
