@@ -119,7 +119,7 @@
             opacity: 0;
         }
 
-        .jl--modal-header, .jl-modal-body, .jl-form {
+        .jl-modal-header, .jl-modal-body, .jl-form {
             width: 100%;
             display: table;
             position: relative;
@@ -277,7 +277,7 @@
             margin-top: 10%;
         }
 
-        #jl-home-presention{
+        #jl-home-presentation{
             background-image: url('../images/joao-lemon-designer-home.png');
             background-repeat: no-repeat;
             background-position: 50% bottom;
@@ -334,6 +334,50 @@
             animation: lineDown 1.5s infinite ease-out;
             transform-origin: top center;
         }
+
+        /*-------Home-------*/
+
+        .jl-portifolio-navigator {
+            width: 145px;
+            height: 400px;
+            display: table;
+            position: absolute;
+            left: 15px;
+            top: 26vh;
+        }
+
+        .jl-item-counter {
+            width: 100%;
+            height: 90px;
+            display: block;
+            margin-bottom: 60px;
+
+        }
+
+        .jl-item-navigator {
+            width: 100%;
+            display: table;
+
+        }
+
+        .jl-item-navigator a{
+            width: 20px;
+            height: 1px;
+            display: block;
+            margin-bottom: 80px;
+        }
+
+        .jl-item-navigator a:last-child{
+            margin-bottom: 80px;
+        }
+
+        .jl-portifolio-next-prev{
+            width: 100%;
+            height: 45px;
+            display: block;
+
+        }
+
 }
 
     @media screen and (min-width: 576px){
@@ -535,11 +579,16 @@
 
 .jl-full-height{
     height: 100vh;
+    position: relative;
    
 }
 
 .jl-first-section{
  height: calc(100vh - 30px);
+}
+
+.jl-no-padding{
+    padding: 0 !important;
 }
 
 /* CLASSES COMPORTAMENTO */
