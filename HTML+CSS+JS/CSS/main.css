@@ -101,7 +101,7 @@
             z-index: 1000;
             top: 0;
             left: 0;
-            background: rgba(44,203,105,0.5);
+            background-color: rgba(44,203,105,0.5);
             backdrop-filter: blur(5px);
         }
 
@@ -271,7 +271,7 @@
             background: transparent url('../images/corner.svg') no-repeat;
         }
 
-        /*-------Home-------*/
+    /*----HOME----*/
 
         .jl-display-text {
             margin-top: 10%;
@@ -334,7 +334,7 @@
             transform-origin: top center;
         }
 
-        /*-------Home-------*/
+     /*----HOME - PORTFOLIO ----*/
 
         .jl-portfolio-navigator {
             width: 145px;
@@ -429,6 +429,27 @@
             font-size: 32px;
         }
 
+        .jl-slider-container {
+            background-color: white;
+            display: block;
+            overflow: hidden;
+            
+        }
+
+        .jl-slider-list{
+            width: auto;
+            height: 700px;
+            display: block;
+            background-color:deeppink;
+            list-style: none;
+
+        }
+
+        .jl-slider-item{
+            display: block;
+            height: 500px;
+            float: left;
+        }
 }
 
     @media screen and (min-width: 576px){
@@ -540,8 +561,8 @@
 }
 
 .jl-btn-green {
-    background-color: #2ccb69;
-    color: #000;
+    background-color: #2CCB69;
+    color: #1C1C1C;
 }
 
 .jl-btn-green:hover{
@@ -558,7 +579,8 @@
     color: #fff;
 }
 
-/* CLASSES UTILITÁRIAS */
+/* CLASSES UTILITARIAS */
+
 .jl-title {
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
@@ -631,9 +653,6 @@
 .jl-full-height{
     height: 100vh;
     position: relative;
-    top: auto;
-    left: -15px;
-   
 }
 
 .jl-first-section{
@@ -670,4 +689,24 @@
 .jl-no-radius-right{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+.red {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.purple {
+    background: purple;
+}
+
+.blue {
+    background: blue;
 }
