@@ -250,7 +250,7 @@
             line-height: 24px;
         }
 
-        .jl-social-links {
+        .jl-social-links, .jl-social-links-circle {
             width: 100%;
             height: 45px;
             display: block;
@@ -259,11 +259,37 @@
             margin-top: 7px;
         }
 
-        .jl-social {
+        .jl-social-links-circle {
+            left: 0;
+        }
+
+
+        .jl-social, .jl-social-links-circle .jl-social {
             width: 45px;
             height: 45px;
             display: inline-block;
-         }
+        }
+
+        .jl-social-links-circle .jl-social{
+            border-radius: 50%;
+            text-align: center;
+            transition: all 0.2s ease-out;
+
+        }
+
+        .jl-social-links-circle .jl-social ion-icon{
+            height: 45px;
+            transition: all 0.2s ease-out;
+        }
+
+        .jl-social-links-circle .jl-social:hover{
+            background-color: #000;
+        }
+
+        .jl-social-links-circle .jl-social:hover ion-icon{
+            color: #2ccb69;
+        }
+
 
         .jl-social > img {
             width: 20px;
@@ -582,6 +608,24 @@
         left: 75px;
     }
 
+    /*----SOBRE----*/
+
+    #jl-avatar-sobre {
+        position: relative;
+        left: -15px;
+    }
+
+    /*----DETALHES----*/
+
+    .jl-hero{
+        height: 500px;
+        background-image: url('../pages/portfolio/img/hero.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: block;
+    }
+
 }
 
     @media screen and (min-width: 576px){
@@ -734,6 +778,12 @@
     font-weight: normal;
 }
 
+.jl-subtitle {
+    font-family: 'Open Sans', serif;
+    font-weight: 800;
+}
+
+
 .jl-title-large {
     font-size: 64px;
 }
@@ -850,6 +900,44 @@
 
 .jl-no-padding{
     padding: 0 !important;
+}
+
+.jl-box-img {
+    width: 100%;
+    display: table;
+}
+
+.jl-img-responsive  {
+    width: 100%;
+    max-width: 100%;
+    height: block;
+}
+
+.jl-page-list {
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.jl-page-list > li {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.jl-page-list > li::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background-color: #2CCB69;
+
 }
 
 /* CLASSES COMPORTAMENTO */
