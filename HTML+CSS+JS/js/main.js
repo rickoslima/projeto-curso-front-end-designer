@@ -12,7 +12,6 @@ window.addEventListener('load', function () {
     }, 2000);
 });
 
-
 //Abrindo e Fechando Informações de Contato
 btnContact.addEventListener('click', function () {
     var boxContact = document.querySelector('.jl-contact-info');
@@ -21,7 +20,6 @@ btnContact.addEventListener('click', function () {
 });
 
 //Abrindo e Fechando o Modal de Orcamento
-
 for (var i = 0; i < toggleModal.length; i++) {
     toggleModal[i].addEventListener('click', function () {
         var overlay = document.querySelector('.jl-overlay');
@@ -30,9 +28,12 @@ for (var i = 0; i < toggleModal.length; i++) {
         overlay.classList.toggle('jl-is-open');
         modalOrcamento.classList.toggle('jl-is-open');
         modalOrcamento.classList.toggle('jl-slide-top-in');
-
     });
 }
+
+var postGallery = document.querySelector('.jl-post-gallery');
+var portGalleryHeight = postGallery.clientHeight;
+postGallery.style.height = (portGalleryHeight - 270) + 'px';
 
 // Animando Elementos on Scroll com Waypoints
 var myScrollDown = document.querySelector('.jl-scroll-down');
@@ -43,4 +44,6 @@ var waypoint = new Waypoint({
     },
     offset: '80%'
 });
+
+
 
